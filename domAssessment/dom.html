@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="./dom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Baumans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <p>Q1. Write the code to access element which is having id as "text".</p>
+
+    <p>Q2. Write the code to access element which is having tag as "h1".</p>
+
+    <h1 id="text">This is DOM assessment</h1>
+
+    <p>Q3. Write the code to access element which is having class as "box".</p>
+    <p class="box">Lorem ipsum dolor sit amet.</p>
+
+    <p>Q4. Change the heading from ""Hello"" to ""Hello World"" using DOM functions</p>
+
+    <h1 class="chng">Hello</h1>
+
+    <p>Q5. Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</p>
+
+    <div id="cards">
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+    </div>
+    <button class="btn" onclick="change()">Change Flex Direction</button>
+
+    <p>Q6. What’s the difference between window vs document?</p>
+    <p class="test">Window is the global execution context and global object which holds all the properties of the webpage as keys in  a browser. 
+    Document is a object which contains the Document Object Model(DOM). By accessing the document object, we can access the element in the HTML page.</p>
+
+     <p>Q7. <!--<h1> Hello </h1> -->
+        Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions.</p>
+    <h1>Hello</h1>
+
+    <p>Q8. Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy".</p>
+    <div class="content">Hello World</div>
+    <button class="btn" onclick="replace()">Replace Text</button>
+
+    <p>Q9. Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second.</p>
+    <div class="clock">
+        The time is
+        <span id="HH"></span>:     
+        <span id="MM"></span>:     
+        <span id="SS"></span>
+    </div>
+
+    <p>Q10. Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected.</p>
+    <div class="year">
+    <select id="drop" onchange="dd()">
+        <option>-- select year --</option>
+        <option>16-17</option>
+        <option>17-18</option>
+        <option>18-19</option>
+        <option>19-20</option>
+        <option>20-21</option>
+        <option>21-22</option>
+    </select>
+    <input type="text" id="txtval">
+    </div>
+
+    <p>Q11. "Create a form having name ,email, phone no. , birth year 
+        Add validations - phone no. should start with 91 , it should be 10 digits
+        email should be domain prepbytes.com
+        birth year should be > 95".</p>
+    <form action="#" class="valid">
+        <label for="name">Name : </label> 
+        <input id="name" type="text" placeholder="Enter your name" required><br><br>
+        <label for="email">Email :</label>
+        <input id="email" type="text" placeholder="Enter your email" required>
+        <span> Domain should be "@prepbytes.com" only</span>
+        <br><br>
+        <label for="phone">Phone No:</label>
+        <input id="phone" type="number" name="phoneNumber" placeholder="Enter the phone number" required>
+        <span> Phone number should start with '91' and must be 10 digits only</span>
+        <br><br>
+        <label for="birthYear">Birth Year : </label>
+        <input id="birthYear" type="date" name="birthYear" required>
+        <span> Birth Year should be greater than 1995</span>
+        <br><br>
+        <button type="submit" onclick="check()">Submit</button>
+    </form>
+    
+    <script src="./dom.js"></script>
+</body>
+</html>

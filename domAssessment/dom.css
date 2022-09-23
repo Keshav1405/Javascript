@@ -1,0 +1,104 @@
+/* q1 & q2 */
+#text {
+    color: white;
+    background-color: darkcyan;
+    padding: 20px;
+    border: 4px solid #000000;
+    margin-left: 10px;
+    text-align: center;
+    box-shadow: 8px 8px 20px black;
+    display: inline-block;
+}
+/* q3 */
+.box{
+    padding: 10px;
+    background-color: chocolate;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* q4 */
+.chng{
+    /* text-align: center; */
+    text-shadow: 1px 1px 5px black;
+}
+
+/* q5 */
+#cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#cards p{
+    width: 250px;
+    height: 250px;
+    color: white;
+    background-color: rgb(13, 126, 38);
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px black;
+}
+.btn{
+    color: yellow;
+    background-color: #000000;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+
+/* q6 */
+.test{
+    font-size: 1.2rem;
+    padding: 5px;
+    color: white;
+    background-color: darkviolet;
+}
+
+/* q8 */
+.content{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 23px;
+    font-weight: bolder;
+    font-family: 'Barlow', sans-serif;
+    background-image: linear-gradient(to right, #CB52F8, #FC5EFF, #F1A7C5);
+}
+
+/* q9 */
+.clock{
+    font-size: 1.5rem;
+    background-color: blanchedalmond;
+    border: 2px solid grey;
+    padding: 23px;
+    margin: 20px 0;
+    text-align: center;
+}
+.clock span{
+    font-weight: bold;
+}
+
+/* q10 */
+.year{
+    padding: 20px;
+    background-color: rgb(16, 148, 115);
+    border: 4px groove rgb(153, 141, 141);
+    display: flex;
+    justify-content: center;
+}
+
+/* q11 */
+.valid{
+    font-size: 1.4rem;
+    border: 4px dashed red;
+    padding: 10px;
+}
+
+.valid span{
+    font-size: 0.8rem;
+    color: red;
+    font-style: italic;
+}

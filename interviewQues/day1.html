@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-1</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 1.2rem;
+        }
+        h3{
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <h3>Q1. Difference between “ == “ and “ === “ operators.</h3>
+    <p>Double equals named as Equality Operator. " == " compares only the values of the two variables being compared.</p>
+    <p> Triple equals named as Identity / Strict equality Operator." === " compares both the values and data type of the two variables being compared.</p>
+    <hr>
+    <h3>Q2. What is the spread operator?</h3>
+    <p>The spread operator(...) allows us to copy all or part of an existing array or object into a new array or object. The new array could be empty or have some values in it, the spread operator will concat the value of previous array into the new array.</p>
+    <hr>
+    <h3>Q3. What are the differences between var, let and const?</h3>
+    <p>They are all keywords to declare a variable with some differences which are as follows:</p>
+    <ul>
+        <li>var can be updated and redeclared. It's scope is functional scope and its default value without initialisation is 'undefined'.</li>
+        <li>let can be updated but can't be redeclared. It's scope is block scope and it cannot be accessed without initialisation.</li>
+        <li>const can neither be updated nor redeclared. It's scope is block scope and it cannot be accessed without initialisation.</li>
+    </ul>
+    <hr>
+    <h3>Q4. What is execution context?</h3>
+    <p>The execution context is used to describe how a code works inside. The specified code is parsed line by line during the execution context, and the variables and functions are saved in memory. The code is evaluated and then executed in an execution context, which is similar to a container that contains variables. First of all, a 'Global execution context' is created in which the global scope variables are stored and a 'function execution context' is created when there is a function call in the code.</p>
+    <hr>
+    <h3>Q5. What is meant by first class functions?</h3>
+    <p>the functions are first class functions means they can be stored in variable, objects and array. Thet can also be passed as an argument in another function, returned from other functions, have their own properties.</p>
+    <hr>
+    <h3>Q6. What are closures? Give an example of closure.</h3>
+    <p>When a function is declared inside another function then the child function can inherit the values from it's lexial parent function, this is known as closures in JS. Closures are created every time a function is created, at function creation time.</p>
+    <hr>
+    <h3>Q7. Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind().</h3>
+    <ul>
+        <li>Call is a method in function that helps us to replace the value of 'this' inside a function with whatever value we want. Some additional arguments can alse be given for the variables inside the function.</li>
+        <li>Apply is very similar to the call method. The only difference is that in apply we can pass an array as an argument list.</li>
+        <li>Bind is a method in function that helps us to create another function that we can execute later as per our requirement.</li>
+    </ul>
+
+    <script>
+        // Closures example
+        function parent(){
+            let a = 3;
+            let b = 4;
+            function child(){
+                console.log(a*b);
+            }
+            child()
+        }
+        parent();
+
+        // call(), apply(), bind() examples
+        function func(x, y) {
+            console.log(this)
+            console.log(x+y)
+        }
+        // call()
+        func.call("Hello", 10, 20)
+        // apply()
+        func.apply("Hello",[10, 20])
+        // bind()
+        let func2 = func.bind("Hello", 10, 20)
+        func2()
+    </script>
+</body>
+</html>

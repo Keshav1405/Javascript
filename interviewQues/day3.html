@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-3 | interview-ques</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 1.2rem;
+        }
+        h3{
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <h3>Q1. What is the use of setTimeout?</h3>
+    <p>setTimeout is a method that executes the function or statement after given period of time.</p>
+    <hr>
+    <h3>Q2. What is an event loop and call stack?</h3>
+    <p>An event loop is something that pulls stuff out of the queue and places it onto the global execution context whenever the GEC becomes empty.</p>
+    <p>Callstack is a way for the Java engine to keep track of its place in code that calls multiple functions.When you execute a script, the JavaScript engine creates a global execution context and pushes it on top of the call stack.Whenever a function is called, the JavaScript engine creates a function execution context for the function, pushes it on top of the call stack, and starts executing the function.When the current function completes, the JavaScript engine pops it off the call stack and resumes the execution where it left off.The script will stop when the call stack is empty.</p>
+    <hr>
+    <h3>Q3. What are arrow functions?</h3>
+    <p>Arrow function is the newest feature introduced in ES6 version of JS, to write simple and manageable code that is easy to debug and understand.</p>
+    <hr>
+    <h3>Q4. What is a Temporal Dead Zone?</h3>
+    <p>If you are accessing any variable before its declaration and that variable is defined using let and const, then you will be getting reference error because the variable is in temporal dead zone.</p>
+    <hr>
+    <h3>Q5. What is hoisting?</h3>
+    <p>Hoisting in JavaScript is a behavior in which a function or a variable can be used before declaration and this is happening due to the creation phase of the Execution Context. It gives us an advantage that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local. It allows us to call functions before even writing them in our code. </p>
+    <hr>
+    <h3>Q6. What is the DOM?</h3>
+    <p>DOM stands for document object model and it is used to access the root file i.e the HTML file of the webpage. Using DOM, you can add new HTML elements as well as manipulate the existing elements.</p>
+    <hr>
+    <h3>Q7. Difference between undefined vs not defined vs NaN.</h3>
+    <p>Undefined is a datatype in JS which means a variable is declared but its value is not specified. It is also the default value of a variable declared using 'var' upon hoisting.</p>
+    <p>Not defined is shown on the console when a variable is used for something but it was never declared.</p>
+    <p>NAN stands for 'not a number' which is the value given to a number if it contains alphabets or any special character. For ex: "23e4%89"
+    </p>
+
+    <script>
+        //setTimeOut example
+        setTimeout(() => {
+            console.log("Hello");
+        }, 2000);
+
+        //Arrow function example
+        let a = () => {
+            console.log("Arrow fn executed");
+        };
+        a();
+    </script>
+</body>
+</html>

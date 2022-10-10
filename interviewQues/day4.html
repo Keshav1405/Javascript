@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-4 | interview ques</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 1.2rem;
+        }
+        h3{
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <h3>Q1. How many operators do we have in JS ?</h3>
+    <p>JS has many types of operators such as:</p>
+    <ul>
+        <li>Arithematic operators(+, -, *, /, %, ++, --)</li>
+        <li>Comparison operators(==, !=, <=, >=, <, >)</li>
+        <li>Assignment operators(=, +=, -=, /=, %=, *=)</li>
+        <li>Logical operators(&&, ||, !)</li>
+    </ul>
+    <hr>
+    <h3>Q2. What are pure functions?</h3>
+    <p>It is a function that would give some or consistent output if some input is being passed. It is othing but a well defined function.</p>
+    <hr>
+    <h3>Q3. What is callback hell?</h3>
+    <p>It is a function that will be executed after the execution of its parent function. It also forms pyramid like structure that is difficult to understand and debug. We should avoid using callback hell as much as possible.</p>
+    <hr>
+    <h3>Q4. What are promises and why do we need them?</h3>
+    <p>Promises is like heaven for callback hell. It is introduced in ES6 version to handle asynchronous operations in an efficient way. to debug and manage code we need promises.</p>
+    <p>Promise allows us to write cleaner code and allows error to pass down the chain and can be handled </p>
+    <hr>
+    <h3>Q5. What is promise chaining?</h3>
+    <p>Multiple use of `.then` method will leads to promise chaining.</p>
+    <hr>
+    <h3>Q6. What is the purpose of async/await keywords? Give an example of async/await.</h3>
+    <p>Async/Await is the extension of promises which we get as a support in JS. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.</p>
+
+
+    <script>
+        // pure function example
+        function add(a,b) {
+            console.log(a+b);
+        }
+        add(23,34);
+        add(62,5);
+
+
+        // callback hell example
+        function print(){
+            setTimeout(() => {
+                console.log(5)
+                setTimeout(() => {
+                    console.log(4)
+                    setTimeout(() => {
+                        console.log(3)
+                        setTimeout(() => {
+                            console.log(2)
+                            setTimeout(() => {
+                                console.log(1)
+                            }, 1000);
+                        }, 2000);
+                    }, 3000);
+                }, 4000);
+            }, 5000);
+        }
+        print()
+
+
+        // Promise example
+        const printNumber = (time, value) =>{
+            return new Promise((resolved, rejected) => {
+                setTimeout(() => {
+                    console.log(value)
+                    resolved();
+                }, time);
+            })
+        }
+        printNumber(5000, 5)
+            .then(() => printNumber(4000, 4))
+            .then(() => printNumber(3000, 3))
+            .then(() => printNumber(2000, 2))
+            .then(() => printNumber(1000, 1))
+
+        
+        // Async/Await example
+        let example = async() => {
+            let x = await "async/await example";
+            console.log(x);
+        }
+        console.log("This");
+        example();
+        console.log("is");
+    </script>
+</body>
+</html>

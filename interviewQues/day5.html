@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-5 | interview ques</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 1.2rem;
+        }
+        h3{
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <h3>Q1. What is the for-in loop in JavaScript? Give its syntax?</h3>
+    <p>for-in loop is a subsidiary of 'for loop' and it is used to iterate on the keys of an object/array.</p>
+    <hr>
+    <h3>Q2. Explain Local Scope, Block Scope, Functional Scope and Scope Chain in javascript.</h3>
+    <ul>
+        <li>Local scope or block scope in JS means the variable declared within {}, if, switch, loops then it can only be accessed inside that block and not outside it.</li>
+        <li>Functional scope is name as local scope, the only difference is that the variable is defined inside a function.</li>
+        <li>Scope chain means the variables of the lexical parent can be accessed inside a block/function.</li>
+    </ul>
+    <hr>
+    <h3>Q3. What is difference between null and undefined and where to use what?</h3>
+    <p>Null and undefined are primitive data types. Null is like a keyword that is programmatically empty and undefined is a keyword that will be getting if you are accessing variables before initialisation.</p>
+    <p>undefined is the default value before initialisation while null is a specified value as 'nothing' by the developer.</p>
+    <hr>
+    <h3>Q4. What is Symbol?</h3>
+    <p>Symbol is primitive data type introduced in ES6 version of JS. They are immutable i.e which cannot be changed and unique.</p>
+    <hr>
+    <h3>Q5. Write code to explain map and filter in arrays.</h3>
+    <p>Map will iterate over all the elements on which it has been used, it will return a new array.</p>
+    <p>Filter will return a new array after checking a condition on each element of the old array.</p>
+    <hr>
+    <h3>Q6. Explain passed by value and passed by reference.</h3>
+    <p>Passed by value works with primitive data types. It means that every time we assign a value to a variable a copy of that variable is created every single time. </p>
+    <p>passed by reference works with non-primitive data types. When you are creating an object you're given a reference to that object, if 2 variables hold the same reference, then changing the object reflects in both variable.</p>
+    <hr>
+    <h3>Q7. Please explain Self Invoking Function and its code.</h3>
+    <p>It is also called 'immediately invoked function' and it has been introduced in ES6 version of JS. It should be called just after its declaration so that it doesn't pollutes the outer scope.</p>
+
+    <script>
+        let arr = [3, 5, 7];
+
+        //for-in loop syntax
+        for(let keys in arr){
+            console.log(keys);
+        }
+
+
+        //Symbol example
+        const val = Symbol(1);
+        const val2 = Symbol(1);
+        console.log(val == val2);
+
+
+        // Map & filter example
+        let result = arr.map((val, index) => {
+            return val+index;
+        })
+        console.log(result);
+
+        let result2 = arr.filter((val, index) => {
+            return (val%3 == 0);
+        })
+        console.log(result2)
+
+
+        //passed by value example
+        let a = 10;
+        let b = a;
+        b = a + 5;
+        console.log(a, b);
+
+        //passed by reference example
+        let obj1 = {
+            name: 'Logan',
+            jerseyNo: 23
+        }
+        let obj2 = obj1;
+
+        obj2.jerseyNo = 10;
+        console.log(obj1);
+        console.log(obj2);
+
+
+        //Self Invoking Function example
+        (function(){
+            console.log("self invoked")
+        })()
+    </script>
+</body>
+</html>

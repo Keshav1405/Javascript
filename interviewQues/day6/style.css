@@ -1,0 +1,32 @@
+body{
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+}
+h3{
+    color: orangered;
+}
+i{
+    opacity: 0.7;
+    font-size: 1rem;
+}
+.btn{
+    color: white;
+    background-color: rgb(8, 151, 247);
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+.clock{
+    font-size: 1.5rem;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 23px;
+    text-align: center;
+}
+.clock span{
+    font-weight: bold;
+}
